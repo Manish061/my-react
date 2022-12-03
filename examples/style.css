@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: salmon;
+  margin: 0;
+  padding: 0;
+}
+
+kbd.key {
+  display: inline-block;
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  position: relative;
+}
+
+kbd.key.pressed {
+  background-color: indigo;
+}
+
+kbd.key.home::after {
+  content: "__";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-self: flex-end;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
